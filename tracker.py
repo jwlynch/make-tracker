@@ -4,7 +4,7 @@
 #
 # synopsis:
 #
-# tracker.py startdate
+# tracker.py startdate howmany
 
 import datetime
 from datetime import date
@@ -14,8 +14,9 @@ import sys
 oneDay = datetime.timedelta(days=1)
 
 theDate = parse(sys.argv[1])
+howMany = int(sys.argv[2])
 
-for which in range(14):
+for which in range(howMany):
     print(theDate.strftime("%a, %b %d, %Y"))
     print()
     print()
